@@ -1,3 +1,5 @@
+//valac v.vala -X -O3
+//./v bench.b
 enum OpT {INC, MOVE, PRINT, LOOP}
 namespace Test {
     struct Op {
