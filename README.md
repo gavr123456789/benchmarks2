@@ -35,7 +35,9 @@ Languages benchmarks
 |                Nim C orc |                     14,68 |
 |                  Nim Cpp |                     18,63 |
 |                    Nim С |                     18,92 |
+|                  Crystal |                     22,52 |
 |            Nim C regions |                     23,25 |
+
 
 
 ### Versions
