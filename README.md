@@ -51,6 +51,7 @@ Languages benchmarks
 |            nim --version |                     1.4.6 |
 |            ldc --version | 1.26.0 DMD v2.096.1 LLVM 11.1.0 | 
 |        crystal --version | Crystal 1.0.0 (2021-03-29) LLVM: 10.0.1| 
+|          gccgo --version |         gccgo (GCC) 11.1.0| 
 
 
 # AMD® Ryzen 5 1600 six-core processor × 12
