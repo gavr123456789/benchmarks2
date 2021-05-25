@@ -1,3 +1,4 @@
+// ldc -O -release -mcpu=native d.d
 import std.conv : to;
 import std.exception : assumeUnique;
 import std.file : readText;

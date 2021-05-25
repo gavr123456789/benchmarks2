@@ -1,5 +1,6 @@
-//valac v.vala -X -O3
-//./v bench.b
+// valac v.vala -X -O3 --disable-assert -X 
+// ./v bench.b
+
 enum OpT {INC, MOVE, PRINT, LOOP}
 namespace Test {
     struct Op {

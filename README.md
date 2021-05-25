@@ -1,6 +1,48 @@
 # benchmarks2
 Languages benchmarks
 
+
+# Intel® Core™ i5-10400 CPU @ 2.90GHz × 12
+## brainfuck bench.b
+
+|                 Language |                   Time, s |
+| :----------------------- | ------------------------: |
+|                      C++ |                      1,27 |
+|              Nim regions |                      1,36 |
+|                     Vala |                      1,38 |
+|                        C |                      1,40 |
+|                    Nim C |                      1,40 |
+|                        D |                      1,42 | 
+|       Nim C markAndSweep |                      1,43 |
+|                Nim C orc |                      1,43 |
+|                  Crystal |                      2,18 |
+
+
+## brainfuck mandel.b
+
+|                 Language |                   Time, s |
+| :----------------------- | ------------------------: |
+|                      C++ |                     11,56 |
+|                        C |                     13,15 |
+|                     Vala |                     13,81 |
+|                Nim C arc |                     13,85 |
+|                        D |                     14,18 |
+|                Nim C orc |                     14,68 |
+|                      Nim |                     18,98 |
+|            Nim C regions |                     23,25 |
+
+
+### Versions
+|                 Language |                   Time, s |
+| :----------------------- | ------------------------: |
+|            g++ --version |                    11.1.0 |
+|           vala --version |                    0.52.3 |
+|            gcc --version |                    11.1.0 |
+|            nim --version |                     1.4.6 |
+|            ldc --version | 1.26.0 DMD v2.096.1 LLVM 11.1.0 | 
+
+# AMD® Ryzen 5 1600 six-core processor × 12
+
 ## brainfuck bench.b
 
 |                 Language |                   Time, s |
@@ -34,4 +76,3 @@ Languages benchmarks
 |            ldc --version |                    1.24.0 | 
 
 ### CPU
-AMD® Ryzen 5 1600 six-core processor × 12
