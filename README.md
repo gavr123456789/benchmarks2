@@ -18,6 +18,7 @@ Languages benchmarks
 |       Nim C markAndSweep |                      1,43 |
 |                Nim C orc |                      1,43 |
 |              Nim Cpp arc |                      1,61 |
+|                       Go |                      1,82 |
 |                  Crystal |                      2,18 |
 
 
@@ -37,6 +38,7 @@ Languages benchmarks
 |                    Nim С |                     18,92 |
 |                  Crystal |                     22,52 |
 |            Nim C regions |                     23,25 |
+|                       Go |                     28,39 |
 
 
 

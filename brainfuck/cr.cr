@@ -1,5 +1,3 @@
-require "socket"
-
 module Op
   record Inc, val : Int32
   record Move, val : Int32
@@ -102,27 +100,8 @@ class Program
   end
 end
 
-
-
-def verify
-  text = "++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>
-       ---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++."
-  p_left = Printer.new(true)
-  Program.new(text, p_left).run
-  left = p_left.checksum
-
-  p_right = Printer.new(true)
-  "Hello World!\n".each_char { |c| p_right.print(c.ord) }
-
-  right = p_right.checksum
-  if left != right
-    STDERR.puts "#{left} != #{right}"
-    exit(1)
-  end
-end
-
 class EntryPoint
-  verify
+
   text = File.read(ARGV[0])
   p = Printer.new(ENV.has_key?("QUIET"))
 
