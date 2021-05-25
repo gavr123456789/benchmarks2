@@ -17,6 +17,7 @@ Languages benchmarks
 |                        D |                      1,42 | 
 |       Nim C markAndSweep |                      1,43 |
 |                Nim C orc |                      1,43 |
+|                     Rust |                      1,50 |
 |              Nim Cpp arc |                      1,61 |
 |                       Go |                      1,82 |
 |                  Crystal |                      2,18 |
@@ -30,6 +31,7 @@ Languages benchmarks
 |                        C |                     13,15 |
 |                     Vala |                     13,81 |
 |                Nim C arc |                     13,85 |
+|                     Rust |                     14,00 |
 |              Nim Cpp orc |                     14,13 |
 |                        D |                     14,18 |
 |              Nim Cpp arc |                     14,68 |
@@ -52,6 +54,7 @@ Languages benchmarks
 |            ldc --version | 1.26.0 DMD v2.096.1 LLVM 11.1.0 | 
 |        crystal --version | Crystal 1.0.0 (2021-03-29) LLVM: 10.0.1| 
 |          gccgo --version |         gccgo (GCC) 11.1.0| 
+|          rustc --version |               rustc 1.52.1| 
 
 
 # AMD® Ryzen 5 1600 six-core processor × 12
