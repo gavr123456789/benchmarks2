@@ -8,13 +8,16 @@ Languages benchmarks
 |                 Language |                   Time, s |
 | :----------------------- | ------------------------: |
 |                      C++ |                      1,27 |
+|              Nim Cpp orc |                      1,31 |
 |              Nim regions |                      1,36 |
 |                     Vala |                      1,38 |
 |                        C |                      1,40 |
+|                  Nim Cpp |                      1,40 |
 |                    Nim C |                      1,40 |
 |                        D |                      1,42 | 
 |       Nim C markAndSweep |                      1,43 |
 |                Nim C orc |                      1,43 |
+|              Nim Cpp arc |                      1,61 |
 |                  Crystal |                      2,18 |
 
 
@@ -26,9 +29,12 @@ Languages benchmarks
 |                        C |                     13,15 |
 |                     Vala |                     13,81 |
 |                Nim C arc |                     13,85 |
+|              Nim Cpp orc |                     14,13 |
 |                        D |                     14,18 |
+|              Nim Cpp arc |                     14,68 |
 |                Nim C orc |                     14,68 |
-|                      Nim |                     18,98 |
+|                  Nim Cpp |                     18,63 |
+|                    Nim С |                     18,92 |
 |            Nim C regions |                     23,25 |
 
 

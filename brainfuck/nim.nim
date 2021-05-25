@@ -1,7 +1,6 @@
+# nim cpp -d=danger --passL:"-march=native" --gc=orc 
 import net
 import os
-import posix
-import strformat
 
 type
   OpType = enum Inc, Move, Loop, Print
