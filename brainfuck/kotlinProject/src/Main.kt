@@ -1,15 +1,16 @@
+package mainNiva
+
 //kotlinc kt.kt -include-runtime -d kt.jar
 //java -jar kt.jar bench.b
-import java.io.IOException
-import java.nio.file.Files
-import java.nio.file.Paths
-import java.util.Arrays
+import okio.Path.Companion.toPath
+
+import kotlin.time.measureTime
 
 sealed class Op() {
-    class Inc(val v: Int): Op()
-    class Move(val v: Int): Op()
-    class Loop(val loop: Array<Op>): Op()
-    object Print: Op()
+    class Inc(val v: Int) : Op()
+    class Move(val v: Int) : Op()
+    class Loop(val loop: Array<Op>) : Op()
+    object Print : Op()
 }
 
 class Tape {
@@ -27,7 +28,8 @@ class Tape {
     fun move(x: Int) {
         pos += x
         while (pos >= tape.size) {
-            this.tape = Arrays.copyOf(this.tape, this.tape.size * 2)
+//            this.tape = Arrays.copyOf(this.tape, this.tape.size * 2)
+            this.tape = this.tape.copyOf(this.tape.size * 2)
         }
     }
 }
@@ -84,20 +86,31 @@ class Program(code: String, val p: Printer) {
                 is Op.Loop -> while (tape.get() > 0) {
                     _run(op.loop, tape)
                 }
+
                 is Op.Print -> p.print(tape.get())
+                else -> {}
             }
         }
     }
 }
 
-@Throws(IOException::class)
+//const val PATH = "/home/gavr/Documents/Projects/Fun/benchmarks2/brainfuck/bench.b"
+const val PATH = "/home/gavr/Documents/Projects/Fun/benchmarks2/brainfuck/mandel.b"
+
 fun main(args: Array<String>) {
-    val code = String(Files.readAllBytes(Paths.get(args[0])))
-    val p = Printer(!System.getenv("QUIET").isNullOrEmpty())
+    val path = if (args.isNotEmpty()) args[0] else PATH
+    val code = okio.FileSystem.SYSTEM.read(path.toPath()) { readUtf8() }
 
-    val startTime = System.currentTimeMillis()
-    Program(code, p).run()
-    val timeDiff = (System.currentTimeMillis() - startTime) / 1e3
+    val p = Printer(false)
 
-    println("time: ${timeDiff}s")
+    val q = measureTime {
+        Program(code, p).run()
+    }
+
+
+    println(q)
+//    val startTime = System.currentTimeMillis()
+//    val timeDiff = (System.currentTimeMillis() - startTime) / 1e3
+
+//    println("time: ${timeDiff}s")
 }

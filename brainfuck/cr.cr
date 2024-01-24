@@ -1,3 +1,4 @@
+# crystal build --release  cr.cr
 module Op
   record Inc, val : Int32
   record Move, val : Int32

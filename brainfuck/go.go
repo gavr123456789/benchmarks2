@@ -1,4 +1,5 @@
 // gccgo -O3 -march=native -o goBench go.go
+// go build go.go
 package main
 
 import (

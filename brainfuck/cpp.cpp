@@ -1,3 +1,4 @@
+// g++ cpp.cpp -O3 -march=native
 #include <fstream>
 #include <iostream>
 #include <map>

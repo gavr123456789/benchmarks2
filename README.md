@@ -2,6 +2,63 @@
 Languages benchmarks
 
 
+# 2024
+mn = march=native  
+
+# 12th Gen Intel® Core™ i9-12900H × 20
+## brainfuck bench.b
+
+|                 Language |                   Time, s |
+| :----------------------- | ------------------------: |
+|                C++ O3 mn |                    853.31 |
+|        Nim Cpp mn danger |                    963.84 |
+|               Vala O3 mn |                    970.97 |
+|               Rust O3 mn |                      1.01 |
+|          Nim C mn danger |                      1.05 |
+|               Kotlin JVM |                      1.12 |
+|                       Go |                      1.13 |
+|         D ldc release mn |                      1.14 |
+|            Nim C release |                      1.20 |
+|            D ldc release |                      1.33 |
+|          Crystal release |                      1.42 | 
+| Kotlin GraalVM Native O3 mn |                      1.52 |
+|             GCC-Go O3 mn |                      1.71 |
+|    Kotlin Native release |                      2.38 |
+|      Kotlin Native debug |                     21,16 |
+
+
+## brainfuck mandel.b
+
+|                 Language |                   Time, s |
+| :----------------------- | ------------------------: |
+|                C++ O3 mn |                      9.77 |
+|               Rust O3 mn |                     11.22 |
+|               Kotlin JVM |                     11.75 |
+|               Vala O3 mn |                     12.74 |
+|        Nim Cpp mn danger |                     12.82 |
+|                  C O3 mn |                     12.98 |
+|         D ldc release mn |                     13.72 |
+|            D ldc release |                     13.84 |
+|          Crystal release |                     15.04 | 
+|                       Go |                     15.40 |
+|             GCC-GO O3 mn |                     19.07 |
+|    Kotlin Native release |                     22.59 |
+| Kotlin GraalVM Native O3 mn |                      23.37 |
+|      Kotlin Native debug |                    304.43 |
+
+
+
+### Versions
+|                 Language |                   Time, s |
+| :----------------------- | ------------------------: |
+|            g++ --version |                       13.2.1 |
+|            gcc --version |                       13.2.1 |
+|           vala --version |                      0.56.14 |
+|          kotlin -version |       1.9.22 (JRE 21.0.1+12) |
+|            nim --version |                        2.0.2 |
+|            ldc --version | DMD v2.106.1 and LLVM 16.0.6 | 
+
+# 2021
 # Intel® Core™ i5-10400 CPU @ 2.90GHz × 12
 ## brainfuck bench.b
 
@@ -92,4 +149,3 @@ Languages benchmarks
 |            nim --version |                        1.7.1 |
 |            ldc --version | DMD v2.098.0 and LLVM 13.0.0 | 
 
-### CPU

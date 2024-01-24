@@ -1,3 +1,4 @@
+// gcc cpp.cpp -O3 -march=native
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>

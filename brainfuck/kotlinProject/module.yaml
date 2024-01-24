@@ -1,0 +1,13 @@
+
+product: jvm/app
+
+dependencies:
+  - "com.squareup.okio:okio:3.6.0"
+
+settings:
+  kotlin:
+    languageVersion: 2.0
+  java:
+    source: 19
+  jvm:
+    target: 19
